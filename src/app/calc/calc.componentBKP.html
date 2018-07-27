@@ -1,0 +1,64 @@
+
+<div class="col-md-12 text-center">
+    <a class="logo" href="https://www.campos.rj.gov.br/" target="_blank">
+        <img alt="" src="../../assets/logo.jpg">
+    </a>
+    <h2>Calculadora da Iluminação</h2>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="btn-group" data-toggle="buttons">
+                <label (click)="grupoChange(grupoRadio.value)" *ngFor="let v of grupos" class="btn btn-primary">
+                    <input #grupoRadio type="radio" name="grupo" autocomplete="off" [value]="v.id"> {{ v.val }}
+                </label>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="btn-group" data-toggle="buttons">
+                <label *ngFor="let v of classes" class="btn btn-primary">
+                    <input #classeRadio type="radio" name="classe" autocomplete="off" [value]="v.id"> {{ v.val }}
+                </label>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="btn-group" data-toggle="buttons">
+                <label *ngFor="let v of bandeiras" class="btn btn-primary">
+                    <input #bandeiraRadio type="radio" name="bandeira" autocomplete="off" [value]="v.id"> {{ v.val }}
+                </label>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <input class="form-control input-lg" #consumoInput type="number" placeholder="Consumo (kWh)">
+            <button class="btn btn-primary btn-block btn-lg" (click)="testClick(bandeiraRadio.value)">Calcular</button>                       
+            <!-- <button class="btn btn-primary btn-block btn-lg" (click)="calcular(grupoRadio.value, classeRadio.value, bandeiraRadio.value, consumoInput.value)">Calcular</button>                        -->
+        </div>
+    </div>
+    <!-- <select #grupoSelect (change)="grupoChange($event.target.selectedIndex - 1)" class="form-control input-lg">
+        <option value="" selected>SELECIONE O GRUPO</option>
+        <option *ngFor="let v of grupos" [value]="v.id">{{ v.val }}</option>
+    </select>
+    <br>
+    <select #classeSelect class="form-control input-lg" (change)="0" >
+        <option selected>SELECIONE A CLASSE</option>
+        <option *ngFor="let v of classes" [value]="v.id">{{ v.val }}</option>
+    </select>
+    <br>          
+    <select #bandeiraSelect class="form-control input-lg" (change)="0" >
+        <option>SELECIONE A BANDEIRA</option>
+        <option *ngFor="let v of bandeiras" [value]="v.id">{{ v.val }}</option>
+    </select>
+    <br>
+    <div class="row">
+        <div class="col-md-6">
+            <input class="form-control input-lg" #consumoInput type="number" placeholder="Consumo (kWh)">
+        </div>
+        <div class="col-md-6">
+            <button class="btn btn-primary btn-block btn-lg" (click)="calcular(grupoSelect.value, classeSelect.value, bandeiraSelect.value, consumoInput.value)">Calcular</button>                       
+        </div>
+    </div> -->
+    <br>
+    <div *ngIf="mostraResultado" class="resultado">
+        <span>
+            {{ resultado | currency:'BRL' }}
+        </span>
+    </div>
+</div>

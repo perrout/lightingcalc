@@ -1,0 +1,11 @@
+.resultado span {
+    font-size: 58px;
+    font-weight: bold;
+    display: block;
+}
+h1 {
+    padding-bottom: 30px
+}
+.btn-group {
+    width: 100%;
+}

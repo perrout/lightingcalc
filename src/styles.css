@@ -1,1 +1,361 @@
-/* You can add global styles to this file, and also import other style files */
+/*
+ * Globals
+ */
+
+/*
+ * Base structure
+ */
+ html,
+ body {
+   height: 100%;
+ }
+ body {
+   /* background-color: #2c2047; */
+   background: #2c2047 url('assets/images/c-lateral.png');
+   color: #fff;
+   text-align: left;
+   background-repeat: no-repeat;
+   background-position: right top;
+   /* background-attachment: fixed; */
+   font-family: 'Proxima Nova', Georgia, sans-serif !important;
+ }
+ 
+ /* Links */
+ a,
+ a:focus,
+ a:hover {
+   color: #fff;
+ }
+ 
+ /* Custom default button */
+ .btn-default,
+ .btn-default:hover,
+ .btn-default:focus {
+   color: #333;
+   text-shadow: none; /* Prevent inheritance from `body` */
+   background-color: #fff;
+   border: 1px solid #fff;
+ }
+ 
+ /* Extra markup and styles for table-esque vertical and horizontal centering */
+ .site-wrapper {
+   display: table;
+   width: 100%;
+   height: 100%; /* For at least Firefox */
+   min-height: 100%;
+   /*
+   -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+           box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+ */
+ }
+ .site-wrapper-inner {
+   display: table-cell;
+   vertical-align: top;
+ }
+ .cover-container {
+   margin-right: auto;
+   margin-left: auto;
+ }
+ 
+ /* Padding for spacing */
+ .inner {
+   padding: 30px;
+ }
+ 
+ 
+ /*
+  * Header
+  */
+ /* .masthead-brand {
+   margin-top: 10px;
+   margin-bottom: 10px;
+   text-transform: uppercase;
+   font-style: italic;
+ }
+ .masthead-brand strong {
+     font-style: normal;
+     font-weight: 900
+ } */
+ .masthead-brand {
+  margin-top: 10px;
+  /* margin-bottom: 10px; */
+}
+.masthead-brand .img1 {
+  margin-right: 10px;
+  vertical-align: top;
+}
+.masthead-brand img {
+  height: 100%;
+  max-height: 100px;
+}
+ 
+ /*
+  * Cover
+  */
+
+ .cover {
+   padding: 30px;
+   margin: 0 30px;
+   background-color: #f5f5f5;
+   color: #4a4485;
+ }
+ .cover h4 {
+     width: 100%;
+     text-transform: uppercase;
+     margin: 30px 0 10px;
+ }
+ .cover h4 span {
+     text-transform: none;
+ }
+ .cover h4 .glyphicon {
+     cursor: pointer;
+ }
+ 
+ .cover .btn-lg {
+   padding: 10px 20px;
+   font-weight: bold;
+   line-height: 1
+ }
+ .cover .input-group, .cover .btn {
+     border-radius: 0;
+     width: 100%;
+     text-align: left;
+     text-transform: uppercase;
+     font-size: 1.2em;
+     white-space: normal;
+     min-height: 56px;
+ }
+ .cover .btn span {
+     font-weight: normal;
+ }
+
+.btn small {
+  display: block;
+  width: 100%;
+  font-weight: normal;
+  font-size: .9em;
+}
+ .cover .input-group {
+     font-style: italic;
+     font-weight: normal;
+ }
+ .btn-yellow { 
+    background-color: #edbd21;
+ }
+
+.btn.active {
+  color: #edbd21;
+  background-color: #2c2047;
+}
+ 
+ .btn-green {
+     background-color: #19b24a;
+ }
+ 
+ .btn-red {
+     background-color: #cf263d;
+ }
+ .btn-calc {
+     width: 100%;
+     margin: 30px 0;
+ }
+ .btn-calc .btn-primary {
+     background-color: #4a4485;
+     color: #ffffff;
+     font-size: 2em !important;
+     text-align: center !important;
+     padding: 20px 30px !important;
+     font-weight: bold;
+ }
+ 
+
+ label {
+  width: 100%;
+}
+.btn-icone {
+ display:table;
+}
+.btn-icone .btn-c-icone, .btn-icone .btn-texto {
+ vertical-align:middle;
+ display:table-cell;
+}
+.btn-icone .btn-c-icone {
+ padding-right: 10px;
+ border-style: solid;
+ border-width: 0 2px 0 0;
+ border-color: #4a4485;
+}
+.btn-icone .btn-texto {
+ padding-left: 10px;
+ /* line-height: 2; */
+}
+.c-icone {
+ height: 42px;
+ width: 42px;
+ display: inline-block;
+ vertical-align: middle;
+}
+
+.c-icone-residencial {
+ background-image: url('assets/images/i-residencial.png');
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: 100%;
+}
+
+.c-icone-residencial-br {
+ background-image: url('assets/images/i-residencial-br.png');
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: 100%;
+}
+
+.c-icone-industrial {
+ background-image: url('assets/images/i-industrial.png');
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: 100%;
+}
+.c-icone-comercial {
+ background-image: url('assets/images/i-comercial.png');
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: 100%;
+}
+.c-icone-rural {
+ background-image: url('assets/images/i-rural.png');
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: 100%;
+}
+.c-icone-poder-publico {
+ background-image: url('assets/images/i-poder-publico.png');
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: 100%;
+}
+.c-icone-servico-publico {
+ background-image: url('assets/images/i-servico-publico.png');
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: 100%;
+}
+ .resultado {
+  padding: .8em 0;
+  font-size: 3.5em;
+  font-weight: bold;
+  text-align: center;
+}
+h2 {
+  padding-bottom: 1em
+}
+.logo img {
+  padding: 1em 0;
+  width: 100%;
+  max-width: 300px
+}
+
+.info-box {
+  height: 200px;
+  width: 100%;
+  background-color: #4a4485;
+  color: yellow;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 9999;
+}
+
+
+ /*
+  * Footer
+  */
+ 
+ .mastfoot {
+   color: #ffffff;
+ } 
+ /*
+  * Affix and center
+  */
+  @media (max-width: 420px) {
+    .cover .input-group, .cover .btn, .cover h4 {
+      font-size: .9em !important;
+    }
+    .btn-calc .btn-primary {
+      font-size: 1em !important;
+    }
+    .resultado {
+      font-size: 2.3em;
+    }
+  }
+  @media (max-width: 767px) {
+    body {
+      background-image: none;
+    }
+    .masthead-brand {
+      text-align: center;
+    }
+    .mastfoot p {
+      width: 100%;
+      text-align: center;
+      float: none;
+    }
+    .mastfoot .copyright {
+      padding: 20px 30px 30px;
+    }
+
+  }
+
+ @media (min-width: 768px) {
+
+  .cover h4 {
+    margin: 0 0 10px;
+  }
+   /* Pull out the header and footer
+   .masthead {
+     position: fixed;
+     top: 0;
+   }
+   .mastfoot {
+     position: fixed;
+     bottom: 0;
+   } */
+   /* Start the vertical centering */
+   .site-wrapper-inner {
+     /* vertical-align: middle; */
+   }
+   /* Handle the widths */
+   .masthead,
+   .mastfoot,
+   .cover-container {
+     width: 100%; /* Must be percentage or pixels for horizontal alignment */
+   }
+   .masthead-brand {
+     font-size: 3em;
+   }
+   .masthead-brand strong {
+       font-size: 1.6em;
+   }
+ }
+ 
+ 
+ @media (min-width: 992px) {
+   .masthead,
+   .mastfoot,
+   .cover-container {
+     width: 100%;
+   }
+ }
+
+
+ @media (min-width: 992px) and (max-width: 1280px) {
+  .resultado {
+    font-size: 2.5em;
+  }
+
+  .btn-calc .btn-primary {
+    font-size: 2em !important;
+  }
+}

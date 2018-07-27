@@ -1,0 +1,94 @@
+<!-- <div class="btn-group">
+        <button type="button" class="btn btn-primary" (click)="okClick()">OK</button>
+    </div>   -->
+    <!-- <div class="btn-group">
+        <button class="btn btn-default" [(ngModel)]="radioModel" btnRadio="Left">Left</button>
+        <button class="btn btn-default" [(ngModel)]="radioModel" btnRadio="Middle">Middle</button>
+        <button class="btn btn-default" [(ngModel)]="radioModel" btnRadio="Right">Right</button>
+    </div> -->
+
+<div class="row">
+    <div class="col-md-3">
+        <h4>Selecione um <strong>GRUPO</strong> <span (click)="showInfoGrupo()" (mouseover)="showInfoGrupo()" (mouseout)="showInfoGrupo()" class="glyphicon glyphicon-exclamation-sign pull-right" aria-hidden="true"></span></h4>
+        
+        <div class="btn-group btn-block">
+            <label (click)="grupoChange()" *ngFor="let v of grupos">
+                <button class="btn btn-yellow btn-block btn-lg" [(ngModel)]="dados.grupo" btnRadio="{{ v.val }}"> <span>Grupo</span> {{ v.val }}</button>
+            </label>
+            <div *ngIf="infoGrupo" class="info-box">
+                <div class="row">
+                    <div class="col-md-12">
+                            leorlero
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <h4>Selecione uma <strong>CLASSE</strong> <span (click)="showInfoClasse()" (mouseover)="showInfoClasse()" (mouseout)="showInfoClasse()" class="glyphicon glyphicon-exclamation-sign pull-right" aria-hidden="true"></span></h4>
+        <div class="btn-group btn-block">
+            <label *ngFor="let v of classes">
+                <button class="btn btn-yellow btn-block btn-lg btn-icone" [(ngModel)]="dados.classe" btnRadio="{{ v.id }}"> 
+                    <div *ngIf="v.icone"  class="btn-c-icone">
+                        <i class="c-icone c-icone-{{ v.icone }}" aria-hidden="true"></i> 
+                    </div>
+                    <div class="btn-texto">
+                        <div [innerHTML]="converteT(v.val)"></div>
+                         <small>{{ v.row }}</small>
+                    </div>
+                </button>
+            </label>
+            <div *ngIf="infoClasse" class="info-box">
+                <div class="row">
+                    <div class="col-md-12">
+                            leorlero
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <h4>Selecione uma <strong>Bandeira</strong> <span (click)="showInfoBandeira()" (mouseover)="showInfoBandeira()" (mouseout)="showInfoBandeira()" class="glyphicon glyphicon-exclamation-sign pull-right" aria-hidden="true"></span></h4>
+        <div class="btn-group btn-block">
+            <label *ngFor="let v of bandeiras">
+                <button class="btn btn-{{ v.cor }} btn-block btn-lg" [(ngModel)]="dados.bandeira" btnRadio="{{ v.id }}"> {{ v.val }} <small>{{ v.row }}</small></button>
+            </label>
+            <div *ngIf="infoBandeira" class="info-box">
+                <div class="row">
+                    <div class="col-md-12">
+                            leorlero
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <h4><strong>Consumo</strong> <span>(kWh)</span> <span (click)="showInfoConsumo()" (mouseover)="showInfoConsumo()" (mouseout)="showInfoConsumo()" class="glyphicon glyphicon-exclamation-sign pull-right" aria-hidden="true"></span></h4>
+        
+        <div class="btn-group btn-block">
+            <label class="input-group input-group-lg">
+                    <input class="form-control" [(ngModel)]="dados.consumo" type="number" placeholder="Digite aqui...">
+            </label>
+            <label (click)="calcular()" class="btn-calc">
+                    <button type="button" class="btn btn-primary btn-md">Calcular</button>
+            </label>
+
+            <div *ngIf="infoConsumo" class="info-box">
+                <div class="row">
+                    <div class="col-md-12">
+                            leorlero
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div *ngIf="mostraResultado" class="row">  
+            <div class="resultado">
+                <span>
+                    {{ resultado | currency:'BRL' }}
+                </span>
+            </div>
+        </div>
+    </div>
+  </div>
